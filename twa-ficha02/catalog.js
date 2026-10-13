@@ -15,4 +15,4 @@ export const top = (list,n) =>
 export const categories= (list) =>
     [...new Set(list.map(({category}) => category))].toSorted();
 export const withDiscount = (list,pct) =>
-    list.map((i) => ({...i, price: Math.round(i.price * (-pct/100)*100)/100}));
+    list.map((i) => ({...i, price: Math.round(i.price * (1-pct/100)*100)/100}));
